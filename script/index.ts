@@ -1,6 +1,6 @@
 import { User } from "./class.js";
 
-// TRY ON 
+// TRY START
 const firstUser = new User(10, 0.50)
 const secondUser= new User(25)
 const thirdUser = new User(100)
@@ -59,9 +59,9 @@ userArray.forEach((user,i) =>{
         callButton[i].addEventListener('click', () => {
             user.callSomeone(2)
             if(phoneCredit)
-            phoneCredit[i].innerText = user.phoneCredit.toString()
+            phoneCredit[i].innerText = user.phoneCredit.toString() +'$'
             if(callNumber)
-            callNumber[i].innerText = user.callsNumber.toString()
+            callNumber[i].innerText = "Calls Number = " + user.callsNumber.toString()
           })
       }
 
