@@ -68,7 +68,7 @@ userArray.forEach((user,i) =>{
       if(resetButton) {
         resetButton[i].addEventListener('click', () =>{
             user.resetCalls()
-            callNumber[i].innerText = user.callsNumber.toString()
+            callNumber[i].innerText = "Calls Number = " + user.callsNumber.toString()
         })
       }
 
