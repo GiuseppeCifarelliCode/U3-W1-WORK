@@ -53,6 +53,7 @@ const callNumber= document.querySelectorAll('.call-number') as NodeListOf<HTMLAn
 const resetButton = document.querySelectorAll('.btn-danger') as NodeList
 const formReference = document.querySelectorAll('form') as NodeList
 const rechargeInput = document.querySelectorAll('.recharge-input') as NodeListOf<HTMLInputElement>
+const creditReference = document.querySelectorAll('h5') as NodeListOf<HTMLHeadingElement>
 
 userArray.forEach((user,i) =>{
     if(callButton) {
@@ -72,18 +73,14 @@ userArray.forEach((user,i) =>{
         })
       }
 
-
-// Per aggiungere il recharge button devo prima dividere la stringa del Credito, prendere
-// solo la parte numerica ed aggiungere la ricarica. Poi riaggiungere il $ e cambiare
-// l innertext di riferimento in HTML. Non ho avuto tempo per completare tutto l' HTML
-
-    //   if(formReference) {
-    //     formReference[i].addEventListener("submit", (e) =>{
-    //         e.preventDefault()
-    //         user.recharge(rechargeInput[i].value)
-    //         console.log((rechargeInput));
+      if(formReference) {
+        formReference[i].addEventListener("submit", (e) =>{
+            e.preventDefault()
+            user.recharge(Number(rechargeInput[i].value))
+            creditReference[i].textContent = `${user.phoneCredit}$`
+            rechargeInput[i].value = ""
             
 
-    //     })
-    //   }
+        })
+      }
 })
