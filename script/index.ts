@@ -32,11 +32,11 @@ function createSmartphone(_phoneCredit:number,  _callsCost?:number,  _callsNumbe
       <a href="#" class="btn btn-success">Call Someone</a>
       <a href="#" class="btn btn-danger">Reset Calls</a>
       </div>
-      <form class= 'mb-2'>
+      <form class= 'mb-2 mx-auto container d-flex justify-content-center'>
       <input type="number" class="recharge-input w-50" required></input>
       <button class="btn btn-primary">Recharge</button>
       </form>
-      <div class= 'container d-flex justify-content-between'>
+      <div class= 'container d-flex justify-content-evenly'>
       <a href="#" class="btn btn-secondary">Show Calls List</a>
       <a href="#" class="btn btn-warning">Filter Calls by Day</a>
       </div>
